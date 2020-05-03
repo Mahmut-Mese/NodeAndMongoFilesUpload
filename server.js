@@ -29,7 +29,7 @@ MongoClient.connect(url, {
     if (err) return console.log(err);
     db = client.db('Images');
     app.listen(8000, () => {
-        console.log('listenign 3000')
+        console.log('listenign 8000')
     })
 })
 app.get('/', (req, res) => {
@@ -73,5 +73,5 @@ app.post('/uploadphoto', upload.single('myImage'), (req, res, next) => {
 
 })
 app.listen(9000, () => {
-    console.log("listening 5000")
+    console.log("listening 9000")
 })
