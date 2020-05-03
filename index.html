@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>File,image upload with nodejs mongodb</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .header-section {
+            height: 80px;
+            line-height: 80px;
+            color: beige;
+            background-color: rgb(46, 43, 43);
+            font-size: 24px;
+            padding-left: 20px;
+        }
+        
+        .card {
+            background-color: white;
+            box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+            color: black;
+            margin: 20px;
+            padding: 25px;
+        }
+        
+        .uploadList {
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .progress {
+            position: relative;
+            transform: translate(0%, 50%);
+        }
+        
+        .btn {
+            padding: .575rem .75rem;
+        }
+    </style>
+</head>
+
+</html>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="card">
+                <form action="/uploadFile" enctype="multipart/form-data" method="POST">
+                    <div class="row ">
+                        <div class="col-md-4">
+                            <div id="fileSelector">
+                                <input type="file" name="myFile" class="btn btn-secondary">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="progress">
+                                <div class="progress-bar bg-success"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="submit" value="upload file" class="btn btn-dark">
+
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card">
+                <form action="/uploadMultiple" enctype="multipart/form-data" method="POST">
+                    <div class="row ">
+                        <div class="col-md-4">
+                            <div id="fileSelector">
+                                <input type="file" name="myFiles" class="btn btn-secondary" multiple>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="progress">
+                                <div class="progress-bar bg-success"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="submit" class="btn btn-dark" value="upload files">
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card">
+                <form action="/uploadPhoto" enctype="multipart/form-data" method="POST">
+                    <div class="row ">
+                        <div class="col-md-4">
+                            <div id="fileSelector">
+                                <input type="file" class="btn btn-secondary" name="myImage" accept="image/*">
+
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="progress">
+                                <div class="progress-bar bg-success"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="submit" class="btn btn-dark" value="upload photo">
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
