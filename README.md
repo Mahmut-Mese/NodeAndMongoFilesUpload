@@ -4,3 +4,4 @@ this is a basic example of image upload, single and multi files upload with node
 * download mongodb and nodejs
 * create mongodb local database named Images and add a table named image
 * npm start
+* open http://localhost:8000/
